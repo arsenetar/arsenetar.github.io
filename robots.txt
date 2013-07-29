@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /theme/
+Disallow: /drafts/
+Disallow: CNAME
+Disallow: README.md
