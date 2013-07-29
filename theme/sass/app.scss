@@ -10,11 +10,11 @@
 // @import "foundation/components/visibility";
 // @import "foundation/components/block-grid";
 @import "foundation/components/type";
-@import "foundation/components/buttons";
+// @import "foundation/components/buttons";
 // @import "foundation/components/forms"; // *requires components/buttons
 // @import "foundation/components/custom-forms"; // *requires components/buttons, components/forms
 // @import "foundation/components/button-groups"; // *requires components/buttons
- @import "foundation/components/dropdown-buttons"; // *requires components/buttons
+// @import "foundation/components/dropdown-buttons"; // *requires components/buttons
 // @import "foundation/components/split-buttons"; // *requires components/buttons
 // @import "foundation/components/flex-video";
 // @import "foundation/components/section";
@@ -29,7 +29,7 @@
 @import "foundation/components/labels";
 @import "foundation/components/inline-lists";
 @import "foundation/components/pagination";
-@import "foundation/components/panels";
+// @import "foundation/components/panels";
 // @import "foundation/components/pricing-tables";
 // @import "foundation/components/progress-bars";
 // @import "foundation/components/side-nav";
@@ -93,12 +93,31 @@ body{ background-color: #fff; }
         h1, h2, h3 { margin-top: 0; margin-bottom: 0; }
         border-bottom: 1px solid darken(#fff, 5%);
         .print_header{ display: none; }
+        a.th{
+            display: block;
+            margin-left: emCalc(10px);
+            margin-right: emCalc(10px);
+            margin-bottom: emCalc(10px);
+            text-align: center;
+            background-color: #000;
+            img {
+                max-height: 250px;
+            }
+        }
+    }
+    article {
+        overflow: auto;
+        a.th {
+            display: block;
+            margin-right: auto;
+            margin-left: auto;
+        }
     }
     ul.item-list {
         @extend .no-bullet;
         margin-bottom: 0;
         margin-left: 0;
-        li .article {
+        li .article, li .author {
             border: 1px solid darken(#fff, 5%);
             padding: emCalc(7px);
             margin: emCalc(7px);
@@ -129,6 +148,13 @@ body{ background-color: #fff; }
                 span{ font-size: 0.8em; }
             }
         }
+        li .author .vcard {
+            border: none;
+            border-bottom: 1px solid darken(#fff, 5%);
+            display: block;
+            margin-bottom: emCalc(7px);
+            p:last-child { margin-bottom: emCalc(5px); }
+        }
     }
     dl.item-list {
         dt{ border-top: 1px solid darken(#fff, 5%); }
@@ -138,6 +164,7 @@ body{ background-color: #fff; }
     .page_footer, .article_footer{
         border-top: 1px solid darken(#fff, 5%);
         padding-top: emCalc(5px);
+        margin-top: emCalc(5px);
         .no-bullet{ margin-left: 0; }
         #disqus_thread {
             border-top: 1px solid darken(#fff, 5%);
