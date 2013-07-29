@@ -833,7 +833,7 @@ body { background-color: #fff; }
 #main section dl.item-list dd { margin-bottom: 0.5em; }
 #main section .page_footer, #main section .article_footer { border-top: 1px solid #f2f2f2; padding-top: 0.3125em; }
 #main section .page_footer .no-bullet, #main section .page_footer ul.item-list, #main section .article_footer .no-bullet, #main section .article_footer ul.item-list { margin-left: 0; }
-#main section .page_footer #disqus_thread, #main section .article_footer #disqus_thread { border-top: 0.0625em solid #f2f2f2; }
+#main section .page_footer #disqus_thread, #main section .article_footer #disqus_thread { border-top: 1px solid #f2f2f2; padding-top: 0.625em; }
 
 #mainAside { font-size: 0.8em; }
 #mainAside aside { padding: 0.625em 0.4375em; }
