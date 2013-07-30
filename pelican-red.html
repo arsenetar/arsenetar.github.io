@@ -1,16 +1,21 @@
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
-<!--[if gt IE 8]><!--><html class="no-js" lang="en" > <!--<![endif]-->
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" itemscope itemtype="http://schema.org/WebPage" > <![endif]-->
+  <!--[if gt IE 8]><!--><html class="no-js" lang="en" itemscope itemtype="http://schema.org/WebPage"> <!--<![endif]-->
 <head>
   <!-- meta -->
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width" />
-  <meta name="description" content="This is a personal blog which contains posts on python, electrical engineering and various projects." />
-  <meta name="keywords" content="python,blog,electrical engineering,projects" />
-  <meta name="author" content="Andrew Senetar" />
-  
+    
+            <meta name="description" itemprop="description" content="pelican-red is a theme for the pelican static website generator with lots of stuff and more stuff and more stuff and more stuff and more stuff and more stuff and ..." />
+  <meta name="keywords" itemprop="keywords" content="python,blog,electrical engineering,projects" />
+  <meta name="author" itemprop="author" content="Andrew Senetar" />
+  <meta name="organization" itemprop="sourceOrganization" content="VoltaicIdeas"/>
+  <meta name="publisher" itemprop="publisher" content="VoltaicIdeas"/>
+  <meta name="language" itemprop="inLanguage" content="en" />
+
   <!-- title -->
-  <title>VoltaicIdeas - Pelican-Red </title>
+  <title itemprop="name">VoltaicIdeas - pelican-red</title>
+  <meta itemprop="url" content="http://blog.voltaicideas.net/pelican-red.html"/>
   
   <!-- Stylesheets -->
   <link rel="stylesheet" href="http://blog.voltaicideas.net/theme/css/app.css" />
@@ -19,19 +24,20 @@
   <link href='http://fonts.googleapis.com/css?family=Source+Code+Pro|Open+Sans' rel='stylesheet' type='text/css'> 
   
   <!-- Favicon -->
-  <link rel="shortcut icon" href="http://blog.voltaicideas.net/favicon.ico" /> 
+  <link rel="shortcut icon" href="http://blog.voltaicideas.net/favicon.ico" itemprop="thumbnailUrl"/> 
 
   <!-- RSS/ATOM -->
-  <link href="http://blog.voltaicideas.net/feeds/index.atom.xml" type="application/atom+xml" rel="alternate" title="VoltaicIdeas ATOM Feed" />
+    <link href="http://blog.voltaicideas.net/feeds/index.atom.xml" type="application/atom+xml" rel="alternate" title="VoltaicIdeas ATOM Feed" />
     <link href="http://blog.voltaicideas.net/feeds/index.rss.xml" type="application/rss+xml" rel="alternate" title="VoltaicIdeas RSS Feed" />
         <link href="http://blog.voltaicideas.net/feeds/cat.projects.atom.xml" type="application/atom+xml" rel="alternate" title="VoltaicIdeas Categories ATOM Feed" />
     <link href="http://blog.voltaicideas.net/feeds/cat.projects.rss.xml" type="application/rss+xml" rel="alternate" title="VoltaicIdeas Categories RSS Feed" />
-        
+      
   <!-- Modernizr -->
   <script data="http://blog.voltaicideas.net/theme/js/vendor/" src="http://blog.voltaicideas.net/theme/js/vendor/custom.modernizr.js"></script>
 </head>
 <body>
-  <header id="nav" class="contain-to-grid">
+  <!-- Navigation -->
+    <header id="nav" class="contain-to-grid">
     <nav class="top-bar">
       <ul class="title-area">
         <!-- Title Area -->
@@ -40,53 +46,94 @@
         </li>
         <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
       </ul>
-      <section class="top-bar-section">
+      <section class="top-bar-section" itemscope itemtype="http://schema.org/SiteNavigationElement">
+      <meta itemprop="name" content="VoltaicIdeas Navigation"/>
       <!-- Menu -->
-        <ul class="left">
+      <ul class="left" itemscope itemtype="http://schema.org/ItemList">
+          <meta itemprop="name" content="VoltaicIdeas Menu Items"/>
+          <meta itemprop="ItemListOrder" content="Unordered"/>
                               
-                                                  <li ><a href="http://blog.voltaicideas.net/pages/about.html">About</a></li>
-                                                            <li class="has-dropdown"><a>Categories</a>
+                                                  <li  itemprop="itemListElement">
+            <a href="http://blog.voltaicideas.net/pages/about.html">About</a>
+          </li>
+                                                            <li class="has-dropdown" itemprop="itemListElement" itemscope itemtype="http://schema.org/ItemList"><a>Categories</a>
+            <meta itemprop="name" content="Categories"/>
+            <meta itemprop="url" content="http://blog.voltaicideas.net/Categories.html"/>
+            <meta itemprop="ItemListOrder" content="Unordered"/>
             <ul class="dropdown">
-                            <li  class='active'><a href="http://blog.voltaicideas.net/category/projects.html">Projects</a></li>
+                            <li  class='active' itemprop="itemListElement">
+                <a href="http://blog.voltaicideas.net/category/projects.html">projects</a>
+              </li>
                           </ul>
           </li>
-                                        <li><a href="http://blog.voltaicideas.net/archives.html">Archives</a></li>
-        </ul>
+                                                  <li itemprop="itemListElement">
+            <a href="http://blog.voltaicideas.net/archives.html">Archives</a>
+          </li>
+                  </ul>
         <!-- Social Links -->
-        <ul class="right">
-                              <li><a href="https://github.com/arsenetar" title="Github"><i class="huge icon-github"></i></a></li>
-                    <li><a href="http://www.linkedin.com/in/arsenetar/" title="Linkedin"><i class="huge icon-linkedin"></i></a></li>
-                            </ul>
-      </section>
+                <ul class="right" itemscope itemtype="http://schema.org/ItemList">
+          <meta itemprop="name" content="site-social"/>
+          <meta itemprop="ItemListOrder" content="Unordered"/>
+                    <li itemprop="itemListElement"><a href="https://github.com/arsenetar" title="Github"><i class="huge icon-github"></i></a></li>
+                    <li itemprop="itemListElement"><a href="http://www.linkedin.com/in/arsenetar/" title="Linkedin"><i class="huge icon-linkedin"></i></a></li>
+                  </ul>
+              </section>
     </nav>
-  </header>
-  <!-- Content Area -->
+  </header>  <!-- Content Area -->
   <div class="row">
     <div id="main" class="large-13 columns push-3">
       <section>
-        <header>
-          <h1><a href="http://blog.voltaicideas.net/pelican-red.html" rel="bookmark">Pelican-Red</a></h1>
-          <h2 class="print_header subheader">From: <a href="http://blog.voltaicideas.net">VoltaicIdeas</a></h2>
+        <header itemscope itemtype="http://schema.org/WPHeader">
+           
+          <h1 itemprop="name"><a href="http://blog.voltaicideas.net/pelican-red.html" rel="bookmark" title="Bookmark to pelican-red">pelican-red</a></h1>
+                    <h2 class="print_header subheader">From: <a href="http://blog.voltaicideas.net">VoltaicIdeas</a></h2>
                   </header>
-        <article>
-<p>pelican-red is a theme for the pelican static website generator with lots of stuff and</p>
+        <article itemscope itemtype="http://schema.org/Article">
+<meta itemprop="description" content="pelican-red is a theme for the pelican static website generator with lots of stuff and more stuff and more stuff and more stuff and more stuff and more stuff and ..."/>
+<meta itemprop="name" content="pelican-red"/>
+<meta itemprop="url" content="pelican-red.html"/>
+<meta itemprop="sourceOrganization" content="VoltaicIdeas"/>
+<meta itemprop="inLanguage" content="en"/>
+<meta itemprop="wordCount" content="60" />
+<meta itemprop="copyrightHolder" content="Andrew Senetar"/>
+<div class="article-details">
+  <span class="published">Published on: <abbr title="2013-07-10T21:23:00" itemprop="datePublished">2013-07-10 21:23</abbr></span>
+  <span class="category">In <a href="category/projects.html">projects</a></span>
+    <span class="modified">Last modified on: <abbr title="2013-07-29 2:30" itemprop="dateModified">2013-07-29 2:30</abbr></span>
+  </div>
+<div itemprop="articleBody">
+  <p>pelican-red is a theme for the pelican static website generator with lots of stuff and</p>
 <p>more stuff and more stuff and more stuff and more stuff and more stuff and more and more all the stuff still going... </p>
 <p>and still going some more...</p>
 <p>and some more here as well</p>
 <p>more words, and more and more and more and more</p>
-</article>
+</div>
 <footer class="article_footer">
-<ul class='no-bullet'>
+<ul class='no-bullet no-margin'>
   
    
-    <li>Page content licensed under: 
+    <li>Article content licensed under: 
     <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons Attribution 3.0 Unported">
      
         <i class="large icon-cc"></i>
     <i class="large icon-cc-by"></i>
                         </a>
 </li>
-</ul>
+<li class="author-details" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <ul class="vcard brief row">
+        <div class="small-4 columns">
+          <img src="http://s.gravatar.com/avatar/b1b47974e5d44250ba14786942eb9caa?s=128" class="photo" itemprop="image" />
+      </div>
+  <div class="small-12 columns">
+            <li><a href="http://blog.voltaicideas.net/author/andrew-senetar.html" itemprop="url"><span class="fn" itemprop="name">Andrew Senetar</span></a></li>
+                <li class="org" itemprop="affiliation">Purdue University</li>
+                <li class="title" itemprop="jobTitle">Engineering Student</li>
+                <li class="email" itemprop="email">arsenetar@gmail.com</li>
+          </div>
+      </ul>
+</li>
+<li><ul class="no-bullet no-margin">
+</ul></li>
     <div id="disqus_thread">
     <script type="text/javascript">
         var disqus_shortname = 'voltaicideas'; // required: replace example with your forum shortname
@@ -107,7 +154,8 @@
       </section>
     </div>
     <div id="mainAside" class="large-3 columns pull-13">
-      <aside>
+      <aside itemscope itemtype="http://schema.org/WPSideBar">
+        <meta itemprop="name" content="VoltaicIdeas Sidebar"/>
                                 <h3>Site Search</h3>
         <div class="google_search">
           <script>
@@ -125,21 +173,22 @@
           <gcse:search></gcse:search>
         </div>
                 <h3>Blog Links</h3>
-        <ul id='blogRoll' class="no-bullet">
-                    <li><a href="http://blog.voltaicideas.net/categories.html">Categories</a></li>
-                              <li><a href="http://blog.voltaicideas.net/tags.html">Tags</a></li>
-                              <li><a href="http://blog.voltaicideas.net/archives.html">Archives</a></li>
-                                        <li><a class="external" href="http://hkn.ecn.purdue.edu">HKN Beta</a></li>
-                    <li><a class="external" href="http://getpelican.com/">Pelican</a></li>
-                    <li><a class="external" href="https://github.com/arsenetar/pelican-red">pelican-red</a></li>
+        <ul id='blogRoll' class="no-bullet" itemscope itemtype="http://schema.org/ItemList">
+                    <li itemprop="itemListElement"><a href="http://blog.voltaicideas.net/categories.html">Categories</a></li>
+                              <li itemprop="itemListElement"><a href="http://blog.voltaicideas.net/tags.html">Tags</a></li>
+                              <li itemprop="itemListElement"><a href="http://blog.voltaicideas.net/archives.html">Archives</a></li>
+                                        <li itemprop="itemListElement"><a class="external" href="http://hkn.ecn.purdue.edu">HKN Beta</a></li>
+                    <li itemprop="itemListElement"><a class="external" href="http://getpelican.com/">Pelican</a></li>
+                    <li itemprop="itemListElement"><a class="external" href="https://github.com/arsenetar/pelican-red">pelican-red</a></li>
                   </ul>
-              </aside>
+        
+      </aside>
     </div>
   </div>
-  <footer class="row">
+  <footer class="row" >
     <div class="large-16 columns" id="mainFooter">
-      <span class="print_footer"><a href="http://blog.voltaicideas.net/pelican-red.html"> Fetched from: pelican-red.html</a> on 2013-07-29T16:56:31.025452</span>
-      <span>&copy; Andrew Senetar 2013</span>
+      <span class="print_footer"><a href="http://blog.voltaicideas.net/pelican-red.html"> Fetched from: pelican-red.html</a> on 2013-07-30T15:22:49.689709</span>
+      &copy;<span itemprop="copyrightHolder"> Andrew Senetar </span><span itemprop="copyrightYear">2013</span>
     </div>
   </footer>
   <script src="http://blog.voltaicideas.net/theme/js/app.js"></script>
