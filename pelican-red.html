@@ -6,8 +6,8 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width" />
     
-            <meta name="description" itemprop="description" content="pelican-red is a theme for the pelican static website generator with lots of stuff and more stuff and more stuff and more stuff and more stuff and more stuff and ..." />
-  <meta name="keywords" itemprop="keywords" content="python,blog,electrical engineering,projects" />
+            <meta name="description" itemprop="description" content="History After having tried using wordpress to create a blog on a couple occasions and attempting to create a skin, I gave up due to the clunkiness of the process ..." />
+  <meta name="keywords" itemprop="keywords" content="pelican-red, pelican, python" />
   <meta name="author" itemprop="author" content="Andrew Senetar" />
   <meta name="organization" itemprop="sourceOrganization" content="VoltaicIdeas"/>
   <meta name="publisher" itemprop="publisher" content="VoltaicIdeas"/>
@@ -29,8 +29,8 @@
   <!-- RSS/ATOM -->
     <link href="http://blog.voltaicideas.net/feeds/index.atom.xml" type="application/atom+xml" rel="alternate" title="VoltaicIdeas ATOM Feed" />
     <link href="http://blog.voltaicideas.net/feeds/index.rss.xml" type="application/rss+xml" rel="alternate" title="VoltaicIdeas RSS Feed" />
-        <link href="http://blog.voltaicideas.net/feeds/cat.projects.atom.xml" type="application/atom+xml" rel="alternate" title="VoltaicIdeas Categories ATOM Feed" />
-    <link href="http://blog.voltaicideas.net/feeds/cat.projects.rss.xml" type="application/rss+xml" rel="alternate" title="VoltaicIdeas Categories RSS Feed" />
+        <link href="http://blog.voltaicideas.net/feeds/cat.python.atom.xml" type="application/atom+xml" rel="alternate" title="VoltaicIdeas Categories ATOM Feed" />
+    <link href="http://blog.voltaicideas.net/feeds/cat.python.rss.xml" type="application/rss+xml" rel="alternate" title="VoltaicIdeas Categories RSS Feed" />
       
   <!-- Modernizr -->
   <script data="http://blog.voltaicideas.net/theme/js/vendor/" src="http://blog.voltaicideas.net/theme/js/vendor/custom.modernizr.js"></script>
@@ -62,7 +62,7 @@
             <meta itemprop="ItemListOrder" content="Unordered"/>
             <ul class="dropdown">
                             <li  class='active' itemprop="itemListElement">
-                <a href="http://blog.voltaicideas.net/category/projects.html">projects</a>
+                <a href="http://blog.voltaicideas.net/category/python.html">python</a>
               </li>
                           </ul>
           </li>
@@ -89,24 +89,65 @@
                     <h2 class="print_header subheader">From: <a href="http://blog.voltaicideas.net">VoltaicIdeas</a></h2>
                   </header>
         <article itemscope itemtype="http://schema.org/Article">
-<meta itemprop="description" content="pelican-red is a theme for the pelican static website generator with lots of stuff and more stuff and more stuff and more stuff and more stuff and more stuff and ..."/>
+<meta itemprop="description" content="History After having tried using wordpress to create a blog on a couple occasions and attempting to create a skin, I gave up due to the clunkiness of the process ..."/>
 <meta itemprop="name" content="pelican-red"/>
 <meta itemprop="url" content="pelican-red.html"/>
 <meta itemprop="sourceOrganization" content="VoltaicIdeas"/>
 <meta itemprop="inLanguage" content="en"/>
-<meta itemprop="wordCount" content="60" />
+<meta itemprop="wordCount" content="578" />
 <meta itemprop="copyrightHolder" content="Andrew Senetar"/>
 <div class="article-details">
-  <span class="published">Published on: <abbr title="2013-07-10T21:23:00" itemprop="datePublished">2013-07-10 21:23</abbr></span>
-  <span class="category">In <a href="category/projects.html">projects</a></span>
-    <span class="modified">Last modified on: <abbr title="2013-07-29 2:30" itemprop="dateModified">2013-07-29 2:30</abbr></span>
-  </div>
+  <span class="published">Published on: <abbr title="2013-08-03T21:23:00" itemprop="datePublished">2013-08-03 21:23</abbr></span>
+  <span class="category">In <a href="category/python.html">python</a></span>
+  <div>
+  <meta itemprop="keywords" content="pelican-red, pelican, python"/>  
+  <span><a href="http://blog.voltaicideas.net/tags.html"><i class="icon-tag"></i></a> </span>
+  <ul class="tag-list">
+      <li><a href="http://blog.voltaicideas.net/tag/pelican-red.html">pelican-red</a></li>
+      <li><a href="http://blog.voltaicideas.net/tag/pelican.html">pelican</a></li>
+      <li><a href="http://blog.voltaicideas.net/tag/python.html">python</a></li>
+    </ul>
+</div>
+</div>
 <div itemprop="articleBody">
-  <p>pelican-red is a theme for the pelican static website generator with lots of stuff and</p>
-<p>more stuff and more stuff and more stuff and more stuff and more stuff and more and more all the stuff still going... </p>
-<p>and still going some more...</p>
-<p>and some more here as well</p>
-<p>more words, and more and more and more and more</p>
+  <h2>History</h2>
+<p>After having tried using wordpress to create a blog on a couple occasions and attempting to create a skin, I gave up due to the clunkiness of the process and began to look for easier alternatives.  After some searching I decided that <a href="http://getpelican.com">pelican</a> combined with github-pages would provided an adequate and easy to manage solution.</p>
+<h2>Desired Features</h2>
+<p>In preparing to create the pelican theme, I made a list of features I wanted.
+<em> support all pelican defaults
+</em> responsive layout
+<em> social icons
+</em> Disqus comment support
+<em> code highlighting
+</em> Google Custom Search
+<em> Google Analytics
+</em> use CDN javascript when possible
+<em> author vcards
+</em> modified time on articles
+<em> license per article / page with global option
+</em> optional header image for articles and pages</p>
+<p>After reviewing the list, I decided to start developing a simple two column blog layout using the <a href="http://foundation.zurb.com/">Foundation 4</a> framework.  I chose Foundation 4 mainly due to my previous use of it and my individual preference over bootstrap.</p>
+<h2>The design ( pelican-red )</h2>
+<p>The result became pelican-red ( readable on every device ).  Pelican-red supports all of the features desired and was able to provide a clean layout for this blog.  I continued working on the theme to change almost all of the features to be configured via the pelican configuration file to allow the theme to be generic and usable beyond this blog.</p>
+<h3>Unique Features ( cool stuff )</h3>
+<p>I am going to quickly discuss some of the cool features of the pelican-red theme in this section.  </p>
+<h4>Social Links</h4>
+<p>The social links are used for both the site social links and the author social links.  The social links are basically icon links to different social networking profiles using icon fonts instead of images.  Over 20 different social networks are supported by the theme.</p>
+<h4>Copyright</h4>
+<p>The copyright settings allow for a site wide copyright with options to show the copyright by default on pages and articles separately. In addition individual articles may set a different copyright value.  The copyright details are listed in the pelican settings file and are referenced with a simple alias for the copyright.  Additionally if a Creative Commons copyright is used a iconified copyright link will be generated.</p>
+<h4>Author Details</h4>
+<p>The author details is what empowers the vcard functionality. In the pelican configuration file a listing of authors can be provided which included additional information about each author including things like: email, title, organization, and image.  These will then be displayed as a vcard at the end of an article ( just certain fields ) and on the authors page.</p>
+<h4>Extra Meta</h4>
+<p>The articles and pages support extra meta including:
+<em> modified
+</em> comments
+<em> copyright
+</em> image</p>
+<p>Of these the coolest is the image meta tag which allows for the article to have a header image which also doubles as the articles icon in the listings.</p>
+<h3>The Future</h3>
+<p>pelican-red currently uses some theme "hacks" to achieve the final design, some of which can be converted into pelican plugins.  The modified time, image, and author information will be converted into plugins to modularize the code a bit better in the future.  Additionally the site menu will have support for nested menu-items instead of just a single drop-down. Finally, the print layout will be improved a bit to look less cluttered in some spots. </p>
+<h2>Additional Information</h2>
+<p>The current documentation is in the <a href="https://github.com/arsenetar/pelican-red/blob/master/README.md">README.md</a> in the github repository. The README covers all the settings and features in more detail. The theme itself is at <a href="https://github.com/arsenetar/pelican-red">github</a>. Pelican-red is licensed under the MIT-License. </p>
 </div>
 <footer class="article_footer">
 <ul class='no-bullet no-margin'>
@@ -137,7 +178,7 @@
     <div id="disqus_thread">
     <script type="text/javascript">
         var disqus_shortname = 'voltaicideas'; // required: replace example with your forum shortname
-        var disqus_identifier = 'pelican-red-2013-07-10T21:23:00';
+        var disqus_identifier = 'pelican-red-2013-08-03T21:23:00';
         var disqus_title = 'pelican-red';
         var disqus_url = 'http://blog.voltaicideas.net/pelican-red.html';
         // var disques_category_id =''; // disqus catagory id number from disqus
@@ -187,7 +228,7 @@
   </div>
   <footer class="row" >
     <div class="large-16 columns" id="mainFooter">
-      <span class="print_footer"><a href="http://blog.voltaicideas.net/pelican-red.html"> Fetched from: pelican-red.html</a> on 2013-07-30T15:22:49.689709</span>
+      <span class="print_footer"><a href="http://blog.voltaicideas.net/pelican-red.html"> Fetched from: pelican-red.html</a> on 2013-08-05T12:53:10.635745</span>
       &copy;<span itemprop="copyrightHolder"> Andrew Senetar </span><span itemprop="copyrightYear">2013</span>
     </div>
   </footer>
