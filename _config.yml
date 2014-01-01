@@ -1,0 +1,23 @@
+# General
+safe: true
+timezone: America/Indiana/Indianapolis
+lsi: true
+
+# Excludes
+exclude: ['Readme.md', 'config.rb', 'scss']
+
+# Code highlighting
+pygments: true
+
+# links and paginate
+permalink: date
+pagination: 20
+paginate_path: 'page:num'
+
+# Markdown
+markdown: redcarpet
+markdown_ext: markdown, md
+redcarpet:
+    smart: true
+    extensions: ['no_intra_emphasis', 'tables', 'disable_indented_code_blocks', 'strikethrough', 'superscript', 'underline']
+	
