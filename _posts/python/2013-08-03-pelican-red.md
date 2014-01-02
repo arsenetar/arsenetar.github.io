@@ -1,7 +1,8 @@
 ---
-Title: pelican-red
-Date: 2013-08-03 21:23
-Tags: pelican-red, pelican, python
+layout: post
+title: pelican-red
+date: 2013-08-03 21:23
+tags: pelican-red, pelican, python
 ---
 
 ## History

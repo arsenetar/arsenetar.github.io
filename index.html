@@ -1,0 +1,9 @@
+---
+layout: default
+---
+<h1>Some Text</h1>
+<ul>
+{% for post in paginator.posts %}
+    <li><a href="{{ site.url }}{{ post.url }}">{{ post.title }}</a></li>
+{% endfor %}
+</ul>

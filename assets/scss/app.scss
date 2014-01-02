@@ -1,0 +1,26 @@
+@import "settings";
+@import "foundation";
+
+@import "voltaicideas/pygments";
+@import "voltaicideas/pygments_github";
+
+@import "voltaicideas/icons";
+
+#footer {
+    color: darken($secondary-color, 20%);
+    a {
+        color: desaturate($primary-color, 50%);
+    }
+}
+
+.social a{
+    i { display: none; }
+}
+
+@media #{$medium-up} { 
+    .social a {
+        padding: 0 9px !important;
+        span { display: none; }
+        i { display: inline }
+    }
+}

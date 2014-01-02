@@ -1,6 +1,7 @@
 ---
-layout: index
+layout: default
 title: About
+permalink: /about/
 ---
 
 VoltaicIdeas is the personal blog of Andrew Senetar.  

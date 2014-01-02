@@ -1,23 +1,27 @@
 # General
-safe: true
+safe: false
 timezone: America/Indiana/Indianapolis
-lsi: true
+lsi: false
 
 # Excludes
-exclude: ['Readme.md', 'config.rb', 'scss']
+exclude: ['Readme.md', 'config.rb', 'scss', 'Gemfile', 'Gemfile.lock', 'bower_components', 'node_modules', 'Gruntfile.js', 'package.json', 'bower.json']
 
 # Code highlighting
 pygments: true
 
 # links and paginate
 permalink: date
-pagination: 20
+paginate: 20
 paginate_path: 'page:num'
 
 # Markdown
 markdown: redcarpet
-markdown_ext: markdown, md
 redcarpet:
     smart: true
-    extensions: ['no_intra_emphasis', 'tables', 'disable_indented_code_blocks', 'strikethrough', 'superscript', 'underline']
-	
+    #extensions: ['no_intra_emphasis', 'tables', 'disable_indented_code_blocks', 'strikethrough', 'superscript', 'underline']
+
+# Extra Variables
+owner: 
+    name: Andrew Senetar
+    email: arsenetar@gmail.com
+title: VoltaicIdeas
