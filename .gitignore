@@ -1,6 +1,7 @@
 # Jekyll and Scss
 _site/
 /sass_cache/
+Gemfile.lock
 
 #############
 ## Windows 
