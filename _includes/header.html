@@ -24,11 +24,6 @@
     <!-- Modernizr -->
     <script src="{{ site.url }}/assets/js/modernizr.js"></script>
     
-    <!-- Capture a header image -->
-    {% if page.feature or site.feature %}
-        {% capture feature %}{% if page.feature %}{{ page.feature }}{% else %}{{ site.feature }}{% endif %}{% endcapture %}
-        {% unless feature.url contains 'http://' or feature.url contains 'https://' %}{% capture feature %}{{ site.url }}/images/{{ feature.url }}{% endcapture %}{% endunless %}
-    {% endif %}
 </head>
 <body>
 <div class="contain-to-grid">
@@ -43,7 +38,15 @@
       <section class="top-bar-section">
         <!-- Left Nav Section -->
         <ul class="left">
-          <li><a href="{{ site.url }}/About/">About</a></li>
+            {% for item in site.data.menu %}
+            <li><a href="
+            {% if item.link contains 'http' %}
+            {{ item.link }}
+            {% else %}
+            {{ site.url }}{{ item.link }}
+            {% endif %}
+            ">{{ item.name }}</a></li>
+            {% endfor %}
         </ul>
         
         <!-- Right Nav Section -->
@@ -60,3 +63,4 @@
       </section>
     </nav>
 </div>
+

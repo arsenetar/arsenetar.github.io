@@ -1,0 +1,30 @@
+{% include header.html %}
+{% if page.feature %}
+<div class="row">
+    <div class="small-12 columns imageHeader">
+        <img src="{{page.feature.url }}">
+        {% if page.feature.credit %}
+        <div class="imageCredit">
+            Image Source: <a href="{{ page.feature.creditLink }}">{{ page.feature.credit }}</a>
+        </div>
+        {% endif %}
+    </div>
+</div>
+{% endif %}
+
+<div class="row" itemprop=mainContentOfPage">
+    <article class="small-12 columns">
+        <header>
+            <h1>{{ page.title }}</h1>
+        </header>
+        <div class="content">
+            {{ content }}
+        </div>
+        <footer>
+            {% if page.modified %}
+            <span class="meta">Last modified: <time datetime="{{ page.modified | date_to_xmlschema }}">{{ page.modified | date_to_string }}</time></span>
+            {% endif %}
+        </footer>
+    </article>
+</div>
+{% include footer.html %}

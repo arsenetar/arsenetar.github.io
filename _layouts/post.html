@@ -1,3 +1,52 @@
 {% include header.html %}
-{{ content }}
+{% if page.feature %}
+<div class="row">
+    <div class="small-12 columns imageHeader">
+        <img src="{{ page.feature.url }}">
+        {% if page.feature.credit %}
+        <div class="imageCredit">
+            Image Source: <a href="{{ page.feature.creditLink }}">{{ page.feature.credit }}</a>
+        </div>
+        {% endif %}
+    </div>
+</div>
+{% endif %}
+<div class="row" itemprop="mainContentOfPage" itemscope itemtype="http://schema.org/Blog">
+    <article class="small-12 columns" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+        <header>
+            <h1 itemprop="name">
+                <a href="{{ site.url }}{{ page.url }}" rel="bookmark" title="{{ page.title }}">{{ page.title }}</a>
+            </h1>
+            <h5>
+                <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date_to_long_string }}</time>
+            </h5>
+        </header>
+        <div itemprop="articleBody" class="content">
+            {{ content }}
+        </div>
+        <footer>
+            <span class="meta">
+                <a itemprop="url" href="{{ site.url }}{{ page.url }}">{{ page.title }}</a>
+                <em>Published:</em> <time itemprop="dateCreated" datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date_to_long_string }}</time> {% if page.modified %}(<em>Revised:</em> <time itemprop="dateModified" datetime="{{ page.modified | date_to_xmlschema }}">{{ page.modified | date_to_string }}</time>){% endif %} <em>By:</em> 
+                <span itemprop="author" itemscope itemtype="http://schema.org/Person">
+                    <span itemprop="name">
+                        <a itemprop="url" href="{{ site.url }}/about/" title="About {{ site.owner.name }}" >{{ site.owner.name }}</a>
+                    </span>
+                </span>
+            </span>
+            <div class="text-center">
+                {% for tag in page.tags %}
+                    <a class="tag" href="{{ site.url }}/tags/#{{ tag | cgi_escape }}" title="Pages tagged {{ tag }}">{{ tag }}</a></li>
+                {% endfor %}
+            </div>
+        </footer>
+    </article>
+</div>
+{% if site.disqus_shortname and page.comments %}
+<div class="row">
+    <div class="small-12 columns">
+        <div id="disqus_thread"></div>
+    </div>
+</div>
+{% endif %}
 {% include footer.html %}

@@ -1,7 +1,7 @@
 # General
 safe: false
 timezone: America/Indiana/Indianapolis
-lsi: false
+url: http://blog.voltaicideas.net
 
 # Excludes
 exclude: ['Readme.md', 'config.rb', 'scss', 'Gemfile', 'Gemfile.lock', 'bower_components', 'node_modules', 'Gruntfile.js', 'package.json', 'bower.json']
@@ -9,19 +9,26 @@ exclude: ['Readme.md', 'config.rb', 'scss', 'Gemfile', 'Gemfile.lock', 'bower_co
 # Code highlighting
 pygments: true
 
-# links and paginate
+# links
 permalink: date
-paginate: 20
-paginate_path: 'page:num'
 
 # Markdown
 markdown: redcarpet
 redcarpet:
     smart: true
-    #extensions: ['no_intra_emphasis', 'tables', 'disable_indented_code_blocks', 'strikethrough', 'superscript', 'underline']
+    extensions: ['no_intra_emphasis', 'tables', 'disable_indented_code_blocks', 'strikethrough', 'superscript', 'underline']
 
 # Extra Variables
 owner: 
     name: Andrew Senetar
     email: arsenetar@gmail.com
-title: VoltaicIdeas
+title: Blog@VoltaicIdeas
+
+# Disqus
+disqus_shortname: voltaicideas
+
+# Google Analytics
+ga:
+    code: UA-42346765-1
+    domain: voltaicideas.net
+

@@ -13,8 +13,101 @@
     }
 }
 
+#disqus_thread {
+    border-top: 1px solid $secondary-color;
+    border-bottom: 1px solid $secondary-color;
+    padding-top: 7px;
+    margin-bottom: 7px;
+    margin-top: 10px;
+}
+
 .social a{
     i { display: none; }
+}
+
+.contain-to-grid {
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.imageHeader {
+    padding: 0;
+    .imageCredit {
+        @include label(7px 16px, 0.7rem, rgba(0,0,0,0.5), 0px);
+        position: absolute;
+        color: darken(#fff, 10%);
+        right: 0;
+        bottom: 0;
+        a {
+            color: #fff;
+        }
+    }
+}
+.pageHeader {
+    border-bottom: 1px solid $secondary-color;
+}
+
+.content {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    a {
+        text-decoration: underline;
+    }
+}
+
+.tag {
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    padding: 0.25rem 0.75rem;
+    font-size: 0.6875rem;
+    color: desaturate($primary-color, 20%);
+    background-color: $secondary-color;
+    @include border-radius($global-radius);
+    &:hover {
+        background-color: darken($secondary-color, 10%);
+    }
+    span {
+        @include border-radius($global-radius);
+        display: inline-block;
+        margin-left: 5px;
+        background-color: lighten($secondary-color, 5%);
+        padding: 2px 5px;
+    }
+}
+
+article {
+    header {
+        border-bottom: 1px dashed $secondary-color;
+    }
+    .content {
+        border-bottom: 1px dashed $secondary-color;
+    }
+    footer {
+        color: darken($secondary-color, 20%);
+        a {
+            color: desaturate($primary-color, 50%);
+        }
+        margin-bottom: 7px;
+        .meta {
+            display: block;
+            margin-top: 7px;
+            margin-bottom: 7px;
+        }
+    }
+    &.excerpt {
+        border-bottom: 1px solid $secondary-color;
+        margin-bottom: 7px;
+        padding-bottom: 7px;
+        header {
+            border-bottom: none;
+        }
+        .content {
+            border-bottom: none;
+        }
+        footer {
+            margin-bottom: 0;
+        }
+    }
 }
 
 @media #{$medium-up} { 

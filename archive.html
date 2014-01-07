@@ -1,9 +1,10 @@
 ---
 layout: list
-title: Latest Posts
-description: 'Latest Posts from Blog@VoltaicIdeas'
+title: Post Archive
+description: 'All Posts from Blog@VoltaicIdeas'
+permalink: /archive/
 ---
-{% for post in site.posts limit: 10 %}
+{% for post in site.posts %}
 <article class="excerpt">
     <header>
         <h3><a href="{{ site.url }}{{ post.url }}">{{ post.title }}</a></h3>
@@ -20,6 +21,3 @@ description: 'Latest Posts from Blog@VoltaicIdeas'
         <a href="{{ site.url }}{{ post.url }}">Continue reading ...</a></footer>
 </article>
 {% endfor %}
-<div class="text-center">
-    <h3><a href="{{ site.url }}/archive/">Post Archive</a></h3>
-</div>
