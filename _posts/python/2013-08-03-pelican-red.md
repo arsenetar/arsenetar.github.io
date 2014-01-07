@@ -2,10 +2,9 @@
 layout: post
 title: pelican-red
 date: 2013-08-03 21:23
-tags: pelican-red, pelican, python
+tags: [pelican, python]
+comments: true
 ---
-
-## History
 
 After having tried using wordpress to create a blog on a couple occasions and attempting to create a skin, I gave up due to the clunkiness of the process and began to look for easier alternatives.  After some searching I decided that [pelican](http://getpelican.com) combined with github-pages would provided an adequate and easy to manage solution.
 

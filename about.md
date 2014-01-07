@@ -1,7 +1,8 @@
 ---
-layout: default
+layout: page 
 title: About
 permalink: /about/
+modified: 2014-01-07T00:00:00
 ---
 
 VoltaicIdeas is the personal blog of Andrew Senetar.  
