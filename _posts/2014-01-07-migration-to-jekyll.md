@@ -17,20 +17,27 @@ My favorite markdown editor also happens to be a windows only program MarkdownPa
 Github pages natively supports Jekyll integration which made it a good candidate to replace pelican.  Now everything could be done with a simple push to the pages repository.  I really liked this flow as now I could edit just markdown files and push the files straight to github.  This meant using my favorite editor was now very easy to do.  
 
 As with all conversions there is a bit of work to do to change from one system to another.  Starting with the posts and pages a few things had to change.  The posts needed to be renamed to have the publish date in the file-name so:
+
 ~~~
 pelican-red.md
 ~~~
+
 Became:
+
 ~~~
 2013-08-03-pelican-red.md
 ~~~
+
 This was very straightforward and easy to do.  Then the meta-data in the file had to be changed to the new format.  With Jekyll an additional layout option was required. The change looks like:
+
 ~~~
 Title: pelican-red
 Date: 2013-08-03
 Tags: pelican, python
 ~~~
+
 To:
+
 ~~~
 ---
 layout: post
@@ -38,6 +45,7 @@ title: pelican-red
 tags: ['pelican', 'python']
 ---
 ~~~
+
 Again this was really straightforward.  After making these changes on all the posts and pages all of the content was ready to go.  The next thing was to adapt the theme or create a new theme for the blog.  I chose to create a new theme.
 
 ### Theme

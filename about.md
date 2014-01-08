@@ -5,7 +5,6 @@ permalink: /about/
 modified: 2014-01-07T00:00:00
 ---
 
-VoltaicIdeas is the personal blog of Andrew Senetar.  
 
 ## Contents
 The contents of this blog cover topics such as electrical projects, python, and reviews.  These topics are resultant from personal hobbies and projects of the author.  The electrical projects consist of things such as motor controllers, battery management systems, and audio amplifiers.  The python articles are targeted mainly at web development using python with frameworks such as [flask](http://flask.pocoo.org/) and [tornado](http://www.tornadoweb.org/).  The reviews cover different products mainly in the technology area such as computer components and electronic devices.
