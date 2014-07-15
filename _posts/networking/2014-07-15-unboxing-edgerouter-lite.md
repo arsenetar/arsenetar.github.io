@@ -3,6 +3,7 @@ layout: post
 title: Unboxing EdgeRouter Lite
 description: Unboxing of the Ubiquiti EdgeRouter Lite Gigabit Wired Router.
 tags: [routers, networking]
+comments: true
 ---
 
 Today, I received the [Ubiquity EdgeRouter Lite](http://www.ubnt.com/edgemax/edgerouter-lite/)
