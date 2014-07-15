@@ -81,6 +81,13 @@ article {
     }
     .content {
         border-bottom: 1px dashed $secondary-color;
+        img {
+          max-height: 800px;
+          max-width: 800px;
+          display: block;
+          margin-right: auto;
+          margin-left: auto;
+        }
     }
     footer {
         color: darken($secondary-color, 20%);
@@ -110,7 +117,7 @@ article {
     }
 }
 
-@media #{$medium-up} { 
+@media #{$medium-up} {
     .social a {
         padding: 0 9px !important;
         span { display: none; }
