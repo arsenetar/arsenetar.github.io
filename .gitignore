@@ -1,10 +1,12 @@
-# Jekyll and Scss
+#############
+## Jekyll
+#############
+.jekyll-metadata
 _site/
-/sass_cache/
 Gemfile.lock
 
 #############
-## Windows 
+## Windows
 #############
 
 # Windows image file caches
