@@ -1,0 +1,255 @@
+/*
+ * Layout modified from the Pure.css Responsive Side Menu Example
+ */
+
+
+/*
+ * Variables
+ */
+:root {
+  --menuWidth: 220px;
+  --menuSelectedColor: var(--primaryColor);
+  --menuBgColor: var(--secondaryColor);
+}
+
+/*
+ * Add transition to containers so they can push in and out.
+ */
+#layout,
+#menu,
+.menu-link {
+  transition: all 0.2s ease-out;
+}
+
+/*
+ * This is the parent `<div>` that contains the menu and the content area.
+ */
+#layout {
+  position: relative;
+  padding-left: 0;
+
+  &.active {
+    #menu {
+      left: var(--menuWidth);
+      width: var(--menuWidth);
+    }
+
+    .menu-link {
+      left: var(--menuWidth);
+    }
+  }
+}
+
+/*
+ * Main area of the page containing the header, content, and footer.
+ */
+#main {
+  background-color: var(--globalBgColor);
+
+  /* Main Header of the page with title and subtitle */
+  #mainHeader {
+    margin: 0;
+    color: color(var(--globalBgColor) contrast(60%));
+    text-align: center;
+    padding: 2.5em 2em 0;
+    border-bottom: 1px solid #eee;
+
+    h1 {
+      margin: 0.2em 0;
+      font-size: 3em;
+      font-weight: 300;
+    }
+
+    h2, h3 {
+      font-weight: 300;
+      color: color(var(--globalBgColor) contrast(0%) l(+30%));
+      padding: 0;
+      margin-top: 0;
+    }
+  }
+
+  /* Main content area of the page */
+  #mainContent {
+    position: relative;
+    margin: 0 auto;
+    padding: 0 2em;
+    max-width: 800px;
+    margin-bottom: 50px;
+    line-height: 1.6em;
+
+    .content-subhead {
+      margin: 50px 0 20px 0;
+      font-weight: 300;
+      color: color(var(--globalBgColor) contrast(0%));
+    }
+  }
+}
+
+/*
+The `#menu` `<div>` is the parent `<div>` that contains the `.pure-menu` that
+appears on the left side of the page.
+*/
+
+#menu {
+  margin-left: -var(--menuWidth); /* "#menu" width */
+  width: var(--menuWidth);
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 1000; /* so the menu or its navicon stays above all content */
+  background: var(--menuBgColor);
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+
+  /*
+   * All anchors inside the menu should be styled like this.
+   */
+  a {
+    color: color(var(--menuBgColor) contrast(40%));
+    border: none;
+    padding: 0.6em 0 0.6em 0.6em;
+  }
+
+  /*
+   *Remove all background/borders, since we are applying them to #menu.
+   */
+  .pure-menu {
+    /* Header item */
+    .pure-menu-heading {
+      background: var(--menuSelectedColor);
+      font-size: 110%;
+      color: color(var(--menuSelectedColor) contrast(100%));
+      margin: 0;
+      text-transform: uppercase;
+    }
+
+    ul {
+      border: none;
+      background: transparent;
+      border-top: 1px solid #333;
+    }
+
+    li {
+      /* Hover and focus background */
+      a:hover, a:focus {
+        background: color(var(--menuBgColor) l(+5%));
+      }
+
+    }
+
+    /* Border to divide groups */
+    .menu-item-divided {
+      border-top: 1px solid #333;
+    }
+
+    /* Selected item */
+    .pure-menu-selected {
+      background: var(--menuSelectedColor);
+
+      a {
+        color: color(var(--menuSelectedColor) contrast(75%) s(0%));
+
+        &:hover, &:focus {
+          background-color: color(var(--menuSelectedColor) l(+5%));
+        }
+      }
+    }
+
+  }
+}
+
+/* -- Dynamic Button For Responsive Menu -------------------------------------*/
+
+/*
+The button to open/close the Menu is custom-made and not part of Pure. Here's
+how it works:
+*/
+
+/*
+`.menu-link` represents the responsive menu toggle that shows/hides on
+small screens.
+*/
+.menu-link {
+  position: fixed;
+  display: block; /* show this only on small screens */
+  top: 0;
+  left: 0; /* "#menu width" */
+  background: color(var(--globalBgColor) contrast(100%));
+  background: color(var(--globalBgColor)B3 contrast(100%));
+  font-size: 10px; /* change this value to increase/decrease button size */
+  z-index: 10;
+  width: 2em;
+  height: auto;
+  padding: 2.1em 1.6em;
+
+  &:hover, &:focus {
+    background: color(var(--globalBgColor) contrast(100%));
+  }
+
+  span {
+    position: relative;
+    display: block;
+  }
+
+  span, span:before, span:after {
+    background-color: color(var(--globalBgColor) s(0%));
+    width: 100%;
+    height: 0.2em;
+  }
+
+  span:before, span:after {
+    position: absolute;
+    margin-top: -0.6em;
+    content: " ";
+  }
+
+  span:after {
+    margin-top: 0.6em;
+  }
+}
+
+/* -- Responsive Styles (Media Queries) ------------------------------------- */
+
+/*
+Hides the menu at `48em`, but modify this based on your app's needs.
+*/
+@media (min-width: 48em) {
+
+    .header,
+    .content {
+        padding-left: 2em;
+        padding-right: 2em;
+    }
+
+    #layout {
+        padding-left: var(--menuWidth); /* left col width "#menu" */
+        left: 0;
+    }
+    #menu {
+        left: var(--menuWidth);
+    }
+
+    .menu-link {
+        position: fixed;
+        left: var(--menuWidth);
+        display: none;
+    }
+
+    #layout.active .menu-link {
+        left: var(--menuWidth);
+    }
+}
+
+@media (max-width: 48em) {
+    /* Only apply this when the window is small. Otherwise, the following
+    case results in extra padding on the left:
+        * Make the window small.
+        * Tap the menu to trigger the active state.
+        * Make the window large again.
+    */
+    #layout.active {
+        position: relative;
+        left:  0; /* var(--menuWidth); */
+    }
+}

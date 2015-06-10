@@ -1,0 +1,10 @@
+/*
+ * Settings for Stylesheets
+ */
+
+:root {
+  --primaryColor: #9b160d;
+  --secondaryColor: #e7e7e7;
+  --globalBgColor: #ffffff;
+  --globalRadius: 3px;
+}

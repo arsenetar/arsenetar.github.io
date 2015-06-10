@@ -1,10 +1,26 @@
 {
-  "name": "foundation-libsass-template",
-  "version": "0.0.1",
+  "name": "arsenetar.github.io",
+  "version": "0.0.2",
+  "description": "Assets for the blog arsenetar.github.io (blog.voltaicideas.net).",
+  "author": "Andrew Senetar <arsenetar@gmail.com>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/arsenetar/arsenetar.github.io"
+  },
+  "private": "true",
   "devDependencies": {
-    "node-sass": "~0.7.0",
-    "grunt": "~0.4.1",
-    "grunt-contrib-watch": "~0.5.3",
-    "grunt-sass": "~0.8.0"
+    "cssnext": "^1.6.0",
+    "csswring": "^3.0.5",
+    "del": "^1.2.0",
+    "gulp": "^3.8.11",
+    "gulp-concat": "^2.5.2",
+    "gulp-postcss": "^5.1.8",
+    "gulp-sourcemaps": "^1.5.2",
+    "gulp-uglify": "^1.2.0",
+    "postcss-import": "^5.2.2",
+    "postcss-mixins": "^0.3.0",
+    "postcss-nested": "^0.3.2",
+    "purecss": "^0.6.0",
+    "run-sequence": "^1.1.0"
   }
 }

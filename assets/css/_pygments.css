@@ -1,0 +1,36 @@
+.highlight{
+  font-size: 14px;
+  padding: 0;
+  font-family: 'Source Code Pro', 'Consolas', Monaco, monospace;
+  overflow: auto;
+  margin-bottom: 16px;
+  pre{
+    tab-size: 4;
+    white-space: pre;
+    font-family: inherit;
+    background-color: var(--secondaryColor);
+    border-radius: var(--globalRadius);
+    padding: 3px;
+    padding-left: 5px;
+    line-height: 23px;
+    overflow-x: auto;
+    word-break: inherit;
+    margin: 0;
+
+    code {
+      border: none;
+      background: none;
+
+      &.language-text {
+        color: color(var(--secondaryColor) contrast(75%));
+      }
+    }
+  }
+}
+
+code {
+  background: var(--secondaryColor);
+  color: color(var(--secondaryColor) contrast(75%));
+  padding: 3px 7px;
+  border-radius: var(--globalRadius);
+}
