@@ -5,7 +5,7 @@ lsi: false
 #General
 timezone: US/Central
 encoding: utf-8
-url: http://blog.voltaicideas.net
+url: https://blog.voltaicideas.net
 
 # Excludes
 exclude: [
