@@ -1,13 +1,27 @@
-# General
-safe: false
-timezone: America/Indiana/Indianapolis
+# Github Enforced
+safe: true
+lsi: false
+
+#General
+timezone: US/Central
+encoding: utf-8
 url: http://blog.voltaicideas.net
 
 # Excludes
-exclude: ['Readme.md', 'config.rb', 'scss', 'Gemfile', 'Gemfile.lock', 'bower_components', 'node_modules', 'Gruntfile.js', 'package.json', 'bower.json']
+exclude: [
+  'README.md',
+  'Gemfile',
+  'Gemfile.lock',
+  'CNAME',
+  'assets/css',
+  'assets/js',
+  'assets/node_modules',
+  'assets/gulpfile.js',
+  'assets/package.json',
+]
 
 # Code highlighting
-pygments: true
+highlighter: pygments
 
 # links
 permalink: date
@@ -15,20 +29,39 @@ permalink: date
 # Markdown
 markdown: redcarpet
 redcarpet:
-    smart: true
-    extensions: ['no_intra_emphasis', 'tables', 'disable_indented_code_blocks', 'strikethrough', 'superscript', 'underline']
+  smart: true
+  extensions: [
+    'no_intra_emphasis',
+    'tables',
+    'disable_indented_code_blocks',
+    'strikethrough',
+    'superscript',
+    'underline',
+    'highlight'
+  ]
 
-# Extra Variables
-owner: 
-    name: Andrew Senetar
-    email: arsenetar@gmail.com
+# Defaults for the front matter
+defaults:
+  -
+    scope:
+      path: "" # all files
+    values:
+      layout: "post"
+  -
+    scope:
+      path: ""
+      type: "posts" # all posts
+    values:
+      layout: "post"
+  -
+    scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "page"
+
+# Extra Variables for the templates
+owner:
+  name: Andrew Senetar
+  email: arsenetar@gmail.com
 title: Blog@VoltaicIdeas
-
-# Disqus
-disqus_shortname: voltaicideas
-
-# Google Analytics
-ga:
-    code: UA-42346765-1
-    domain: voltaicideas.net
-

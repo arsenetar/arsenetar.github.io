@@ -1,4 +1,4 @@
-/* TODO */
+/* Application JS Code */
 
 /* Menu Code */
 (function (window, document) {

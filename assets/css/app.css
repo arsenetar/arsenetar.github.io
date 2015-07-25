@@ -70,8 +70,6 @@ a {
 }
 
 .content {
-  padding-left: 0.5rem;
-  padding-right: 0.5rem;
   a {
     text-decoration: underline;
   }
@@ -100,9 +98,6 @@ a {
 
 article {
   header {
-    padding-left: 0.5rem;
-    padding-right: 0.5rem;
-
     h5 {
       color: color(var(--globalBgColor) contrast(0%));
     }
@@ -140,14 +135,6 @@ article {
     footer {
       margin-bottom: 0;
     }
-  }
-}
-
-@media only screen {
-  .social a {
-    padding: 0 9px !important;
-    span { display: none; }
-    i { display: inline }
   }
 }
 

@@ -127,7 +127,7 @@ appears on the left side of the page.
     ul {
       border: none;
       background: transparent;
-      border-top: 1px solid #333;
+      border-top: 1px solid color(var(--menuBgColor) l(-15%));
     }
 
     li {
@@ -140,7 +140,7 @@ appears on the left side of the page.
 
     /* Border to divide groups */
     .menu-item-divided {
-      border-top: 1px solid #333;
+      border-top: 1px solid color(var(--menuBgColor) l(-15%));
     }
 
     /* Selected item */
@@ -176,7 +176,6 @@ small screens.
   top: 0;
   left: 0; /* "#menu width" */
   background: color(var(--globalBgColor) contrast(100%));
-  background: color(var(--globalBgColor)B3 contrast(100%));
   font-size: 10px; /* change this value to increase/decrease button size */
   z-index: 10;
   width: 2em;
@@ -216,8 +215,7 @@ Hides the menu at `48em`, but modify this based on your app's needs.
 */
 @media (min-width: 48em) {
 
-    .header,
-    .content {
+    .header {
         padding-left: 2em;
         padding-right: 2em;
     }

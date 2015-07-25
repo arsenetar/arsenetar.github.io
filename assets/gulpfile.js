@@ -31,10 +31,19 @@ var uglify = require('gulp-uglify');
 var config = {
   'cssDir': 'css',
   'jsDir': 'js',
-  'distDir': 'dist'
+  'distDir': 'dist',
+  'sourcemaps': true
 };
 
+gulp.task('dist', function(callback) {
+  config.sourcemaps = false;
+  return runSequence('clean',
+    ['css', 'js'],
+    callback);
+});
+
 gulp.task('default', function(callback) {
+
   return runSequence('clean',
     ['css', 'js'],
     callback);
@@ -45,21 +54,37 @@ gulp.task('clean', function() {
 });
 
 gulp.task('css', function() {
-  return gulp.src([config.cssDir+'/app.css'])
-    .pipe(sourcemaps.init())
-    .pipe(postcss(processors))
-    .on('error', function (error) {
-      console.log(error);
-    })
-    .pipe(sourcemaps.write('./'))
-    .pipe(gulp.dest(config.distDir));
+  if(config.sourcemaps) {
+    return gulp.src([config.cssDir+'/app.css'])
+      .pipe(sourcemaps.init())
+      .pipe(postcss(processors))
+      .on('error', function (error) {
+        console.log(error);
+      })
+      .pipe(sourcemaps.write('./'))
+      .pipe(gulp.dest(config.distDir));
+    } else {
+      return gulp.src([config.cssDir+'/app.css'])
+        .pipe(postcss(processors))
+        .on('error', function (error) {
+          console.log(error);
+        })
+        .pipe(gulp.dest(config.distDir));
+    }
 });
 
 gulp.task('js', function() {
-  return gulp.src([config.jsDir+'/*.js'])
-    .pipe(concat('app.js'))
-    .pipe(sourcemaps.init())
-    .pipe(uglify({mangle: false}))
-    .pipe(sourcemaps.write('./'))
-    .pipe(gulp.dest(config.distDir));
+  if(config.sourcemaps) {
+    return gulp.src([config.jsDir+'/*.js'])
+      .pipe(concat('app.js'))
+      .pipe(sourcemaps.init())
+      .pipe(uglify({mangle: false}))
+      .pipe(sourcemaps.write('./'))
+      .pipe(gulp.dest(config.distDir));
+  } else {
+    return gulp.src([config.jsDir+'/*.js'])
+      .pipe(concat('app.js'))
+      .pipe(uglify({mangle: false}))
+      .pipe(gulp.dest(config.distDir));
+  }
 });

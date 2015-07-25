@@ -1,16 +1,9 @@
 ---
 layout: list
-title: Tags 
+title: Tags
 description: 'All Posts from Blog@VoltaicIdeas grouped by tag.'
 permalink: /tags/
 ---
-<div class="row" id="top">
-    <div class="small-12 columns text-center">
-        {% for tag in site.tags %}
-        <a class="tag" title="Posts tagged {{ tag[0] }}" href="#{{ tag[0] | cgi_escape }}">{{ tag[0] }}<span>{{ tag[1].size }}</span></a>
-        {% endfor %}
-    </div>
-</div>
 {% for tag in site.tags %}
 <div class="row">
     <div class="small-12 columns">

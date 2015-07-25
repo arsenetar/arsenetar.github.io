@@ -1,6 +1,6 @@
 <!DOCTYPE html>
-<html class="no-js" lang="en" >
-<head>
+<html lang="en" >
+  <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% if page.title != nil %}{{ page.title }} - {% endif %}{{ site.title }}</title>
@@ -12,33 +12,30 @@
     {% if site.owner.google_plus %}<link rel="author" href="{{ site.owner.google_plus }}?rel=author">{% endif %}
 
     <!-- Style Sheets -->
-    <link rel="stylesheet" href="{{ site.url }}/assets/css/app.css">
+    <link rel="stylesheet" href="{{ site.url }}/assets/dist/app.css">
 
     <!-- Fonts -->
     <link href='http://fonts.googleapis.com/css?family=Source+Code+Pro' rel='stylesheet' type='text/css' >
-    
+
     <!-- Favicon -->
     <link rel="shortcut icon" href="{{ site.url }}/favicon.ico" >
 
-    <!-- Modernizr -->
-    <script src="{{ site.url }}/assets/js/modernizr.js"></script>
-    
-</head>
-<body itemscope itemtype="http://schema.org/WebPage">
-<div class="contain-to-grid">
-    <nav class="top-bar" data-topbar>
-      <ul class="title-area">
-        <li class="name">
-          <h1><a href="{{ site.url }}/">{{ site.title | uppercase }}</a></h1>
-        </li>
-        <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
-      </ul>
+  </head>
+  <body>
+    <div id="layout">
+      <!-- Menu toggle -->
+      <a href="#menu" id="menuLink" class="menu-link">
+        <!-- Hamburger icon -->
+        <span></span>
+      </a>
 
-      <section class="top-bar-section">
-        <!-- Left Nav Section -->
-        <ul class="left">
+      <!-- Menu -->
+      <nav id="menu">
+        <div class="pure-menu">
+          <a class="pure-menu-heading" href="{{ site.url }}/">{{ site.title | uppercase }}</a>
+          <ul class="pure-menu-list">
             {% for item in site.data.menu %}
-            <li><a href="
+            <li class="pure-menu-item"><a class="pure-menu-link" href="
             {% if item.link contains 'http' %}
             {{ item.link }}
             {% else %}
@@ -46,20 +43,21 @@
             {% endif %}
             ">{{ item.name }}</a></li>
             {% endfor %}
-        </ul>
-        
-        <!-- Right Nav Section -->
-        <ul class="right">
-            {% for social in site.data.social %}
-            <li class="social">
-                <a href="{{ social.link }}">
-                    <i class="large icon-{{ social.name }}"></i>
-                    <span>{{ social.name | capitalize}}</span>
-                </a>
+            {% for item in site.data.social %}
+            <li class="pure-menu-item {% if forloop.first %}menu-item-divided{% endif %}">
+              <a class="pure-menu-link" href="{{ item.link }}">{{ item.name | capitalize }}</a>
             </li>
+            {% else %}
             {% endfor %}
-        </ul>
-      </section>
-    </nav>
-</div>
+          </ul>
+        </div>
+      </nav>
 
+      <!-- main area closed in footer -->
+      <section id="main">
+        <header id="mainHeader">
+          <h1>{{ page.title }}</h1>
+          {% if page.subtitle %}
+          <h2>{{ page.subtitle }}</h2>
+          {% endif %}
+        </header>

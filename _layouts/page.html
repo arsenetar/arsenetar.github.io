@@ -1,30 +1,35 @@
 {% include header.html %}
+<div id="mainContent">
 {% if page.feature %}
-<div class="row">
-    <div class="small-12 columns imageHeader">
-        <img src="{{page.feature.url }}">
-        {% if page.feature.credit %}
-        <div class="imageCredit">
-            Image Source: <a href="{{ page.feature.creditLink }}">{{ page.feature.credit }}</a>
-        </div>
-        {% endif %}
+  <div class="imageHeader">
+    <img src="{{ page.feature.url }}">
+    {% if page.feature.credit %}
+    <div class="imageCredit">
+      Image Source: <a href="{{ page.feature.creditLink }}">{{ page.feature.credit }}</a>
     </div>
-</div>
-{% endif %}
-
-<div class="row" itemprop="mainContentOfPage">
-    <article class="small-12 columns">
-        <header>
-            <h1>{{ page.title }}</h1>
-        </header>
-        <div class="content">
-            {{ content }}
-        </div>
-        <footer>
-            {% if page.modified %}
-            <span class="meta">Last modified: <time datetime="{{ page.modified | date_to_xmlschema }}">{{ page.modified | date_to_string }}</time></span>
-            {% endif %}
-        </footer>
-    </article>
+    {% endif %}
+  </div>
+  {% endif %}
+    <article>
+      <header>
+        <h5>
+          {% if page.modified %}
+            <em>Last Updated:</em>
+            <time datetime="{{ page.modified | date_to_xmlschema }}">{{ page.modified | date_to_string }}</time>
+          {% endif %}
+          <a class="iconLink" title="Perma-link" href="{{ site.url }}{{ page.url }}"><i class="large icon-bookmark"></i></a>
+        </h5>
+      </header>
+    <div class="content">
+      {{ content }}
+    </div>
+    {% if page.links %}
+    <footer>
+      {% for link in page.links %}
+      <!-- TODO -->
+      {% endfor %}
+    </footer>
+    {% endif %}
+  </article>
 </div>
 {% include footer.html %}
